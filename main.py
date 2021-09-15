@@ -1,16 +1,13 @@
 from flask import Flask
-from flask.wrappers import Request
-from flask_restful import Resource, Api
 import requests
 
 # INIT
 app = Flask(__name__)
-api = Api(app)
 
 @app.route('/city')
 
 def search_city():
-    API_KEY = 'api.openweathermap.org/data/2.5/weather?q=London&appid4160714ccefddd8b61c83a198f86a47b'
+    API_KEY = 'api.openweathermap.org/data/2.5/weather?q={city name}&appid4160714ccefddd8b61c83a198f86a47b'
     city_name = requests.args.get('q') # CITY NAME AS ARGUMENT
     
     # CONVERT RESPONSE TO PY DICTIONARY
