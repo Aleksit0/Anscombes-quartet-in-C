@@ -23,10 +23,14 @@ def idnex():
         'description': r['weather'][0]['description'],
         'icon': r['weather'][0]['icon']
     }
+
+    if weather_dict['description'] == 'light rain':
+        weather_dict['description'] = 'umjereno kisovito'
+
     print(weather_dict)
 
     #return weather_dict
-    return render_template('index.html')
+    return render_template('index.html', content = weather_dict)
 
 if __name__ == '__main__':
     #! WHEN PRODUCTION, debug = False
