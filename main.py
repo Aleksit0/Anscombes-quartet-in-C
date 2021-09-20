@@ -26,11 +26,17 @@ def idnex():
 
     if weather_dict['description'] == 'light rain':
         weather_dict['description'] = 'umjereno kisovito'
+    
+    def obuci_se():  
+        if weather_dict['temperature'] < 18:
+            return 'Obucite se toplije.'
+        else:
+            return 'Obucite se komotnije, vrijeme je toplije.'
 
     print(weather_dict)
 
     #return weather_dict
-    return render_template('index.html', content = weather_dict)
+    return render_template('index.html', content = weather_dict, odjeca = obuci_se())
 
 if __name__ == '__main__':
     #! WHEN PRODUCTION, debug = False
