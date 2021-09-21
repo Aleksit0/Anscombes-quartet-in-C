@@ -1,6 +1,10 @@
 from flask import Flask, render_template
 import requests
 
+
+# IF CSS WONT UPDATE IN CHROME BROWSER HOLD SHIFT AND CLICK RELOAD TO DELETE CACHE
+
+
 # INIT
 app = Flask(__name__, template_folder = 'template')
 
