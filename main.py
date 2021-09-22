@@ -31,6 +31,9 @@ def idnex():
         
     elif weather_dict['description'] == 'clear sky':
         weather_dict['description'] = 'Vedro'
+        
+    elif weather_dict['description'] == 'overcast clouds':
+        weather_dict['description'] = 'Pretezno oblacno'
     
     def obuci_se():  
         if weather_dict['temperature'] < 18:
