@@ -14,11 +14,15 @@
   </h1>
   
   <div class = "weather">
-    <b>Grad:</b> {{ city }} <br>
-    <b>Temperatura:</b> {{ temp }}°C <br>
-    <b>Opis:</b> {{ description }}
+    <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Weahter-icon">
+    <br>
+    {{ city }} <br>
+    <br>
+     {{ temp }}°C <br>
+    <br>
+     {{ description }}
   </div>
-
+  
   <div class = "footer">
     <p>
       © 2021, Aleksa. All rights reserved.
