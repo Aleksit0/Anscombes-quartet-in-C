@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 import requests
+import os
 
 # IF CSS WONT UPDATE IN CHROME BROWSER HOLD SHIFT AND CLICK RELOAD TO DELETE CACHE
 
@@ -10,7 +11,7 @@ app = Flask(__name__, template_folder = 'template')
 @app.route('/')
 
 def idnex():
-    API_KEY = 'http://api.openweathermap.org/data/2.5/weather?q={}&APPID=4160714ccefddd8b61c83a198f86a47b'
+    API_KEY = os.environ.get('FLASK_APP_API')
     city_name = 'Banjaluka'
 
     # PRINT JSON OF THAT CITY DATA IN CONSOLE
