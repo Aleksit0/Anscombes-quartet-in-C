@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify
 import requests
-import os
+import config
 
 # IF CSS WONT UPDATE IN CHROME BROWSER HOLD SHIFT AND CLICK RELOAD TO DELETE CACHE
 
@@ -11,7 +11,7 @@ app = Flask(__name__, template_folder = 'template')
 @app.route('/')
 
 def idnex():
-    API_KEY = os.environ.get('FLASK_APP_API')
+    API_KEY = config.api_key
     city_name = 'Banjaluka'
 
     # PRINT JSON OF THAT CITY DATA IN CONSOLE
@@ -49,7 +49,7 @@ def idnex():
     better_info = [weather_dict['city'], weather_dict['temperature'], weather_dict['description']]
 
     #return weather_dict
-    return render_template('index.html', city = better_info[0], temp = better_info[1], description = better_info[2], odjeca = obuci_se())
+    return render_template('index.html', city = better_info[0], temp = better_info[1], description = better_info[2], odjeca = obuci_se(), icon = weather_dict['icon'])
 
 if __name__ == '__main__':
     # WHEN PRODUCTION, debug = False
