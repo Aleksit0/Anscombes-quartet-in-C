@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify
 import requests
 import config
+from datetime import datetime
 
 # IF CSS WONT UPDATE IN CHROME BROWSER HOLD SHIFT AND CLICK RELOAD TO DELETE CACHE
 
@@ -38,21 +39,19 @@ def idnex():
     
     elif weather_dict['description'] == 'few clouds':
         weather_dict['description'] = 'Umjereno Oblacno'
-    
-    def obuci_se():  
-        if weather_dict['temperature'] < 18:
-            return 'Obucite se toplije'
-        else:
-            return 'Obucite se komotnije, vrijeme je toplije'
 
     # FORMAT JSON
     print(weather_dict, "\n")
+
+    now_time = datetime.now()
+    current_time = now_time.strftime("%H:%M")
+    print(current_time)
     
     # LOOP THROUGH WEATHER INFO
     better_info = [weather_dict['city'], weather_dict['temperature'], weather_dict['description']]
 
     #return weather_dict
-    return render_template('index.html', city = better_info[0], temp = better_info[1], description = better_info[2], odjeca = obuci_se(), icon = weather_dict['icon'])
+    return render_template('index.html', city = better_info[0], temp = better_info[1], description = better_info[2], icon = weather_dict['icon'], time = current_time)
 
 if __name__ == '__main__':
     # WHEN PRODUCTION, debug = False
