@@ -9,17 +9,19 @@
 </head>
 <body>
   
-  <h1>
-      {{ odjeca }}
-  </h1>
+  <div>
+    <h1>
+      {{ time }}
+    </h1>
+  </div>
   
   <div class = "weather">
     
     <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Weahter-icon">
     <br>
     
-    <span class = "temp">{{ temp }}°C</span> <br>
-    
+    <span class = "temp">{{ temp }}<span class = "celsium">°C</span></span> <br>
+    <hr>
     <span class = "desc">{{ description }}</span> <br>
     
     <span class = "city">{{ city }}</span> <br>
