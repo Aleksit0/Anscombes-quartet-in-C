@@ -28,13 +28,16 @@ def idnex():
 
     # TRANSLATE WEATHER DESCRIPTION TO SERBIAN
     if weather_dict['description'] == 'light rain':
-        weather_dict['description'] = 'Umjereno kisovito'
+        weather_dict['description'] = 'Umjereno Kisovito'
         
     elif weather_dict['description'] == 'clear sky':
         weather_dict['description'] = 'Vedro'
         
     elif weather_dict['description'] == 'overcast clouds':
-        weather_dict['description'] = 'Pretezno oblacno'
+        weather_dict['description'] = 'Pretezno Oblacno'
+    
+    elif weather_dict['description'] == 'few clouds':
+        weather_dict['description'] = 'Umjereno Oblacno'
     
     def obuci_se():  
         if weather_dict['temperature'] < 18:
