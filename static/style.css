@@ -11,26 +11,26 @@ html, body {
   margin: 0;
   height: 100%;
   height: 100%;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
 h1 {
-  font-size: 1.5em;
-  text-align: left;
-  margin: auto;
-  padding: 25px 25px; 
-  color: #FFB319;
-  background-color: #112031;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  margin: 0.5em;
 }
 
 .weather {
-  top: 50%;
-  left: 50%;
   font-size: 2em;
   text-align: center;
   width: 50%;
   margin: auto;
   padding: 60px;
   color: #112031;
+  background-color: #eceff1;
+  border-radius: 10px;
 }
 
 .footer {
@@ -39,24 +39,28 @@ h1 {
   bottom: 0;
   width: 100%;
   padding: 6px;
-  background-color: white;
-  color: #112031;
+  color: white;
   text-align: center;
   font-size: small;
+  background: transparent;
 }
 
 img {
-  width: 3em;
+  width: 4.5em;
 }
 
 .desc {
-  font-size: 0.5em;
+  font-size: 1em;
 }
 
 .city {
-  font-size: 1em;
+  font-size: 0.6em;
 }
 
 .temp {
   font-size: 3em;
+}
+
+.celsium {
+  font-size: 0.8em;
 }
