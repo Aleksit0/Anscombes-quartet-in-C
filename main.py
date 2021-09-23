@@ -41,9 +41,9 @@ def idnex():
     
     def obuci_se():  
         if weather_dict['temperature'] < 18:
-            return 'Obucite se toplije.'
+            return 'Obucite se toplije'
         else:
-            return 'Obucite se komotnije, vrijeme je toplije.'
+            return 'Obucite se komotnije, vrijeme je toplije'
 
     # FORMAT JSON
     print(weather_dict, "\n")
