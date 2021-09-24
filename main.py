@@ -55,4 +55,4 @@ def idnex():
 
 if __name__ == '__main__':
     # WHEN PRODUCTION, debug = False
-    app.run(debug = True)  
+    app.run(debug = False)  
