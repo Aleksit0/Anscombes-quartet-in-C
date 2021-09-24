@@ -1,39 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
-  <title>Flask Weather App</title>
-</head>
-<body>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <title>Weather App</title>  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">  
+  <link rel = "stylesheet" href = "{{ url_for('static', filename = 'test.css') }}">
+</head>  
+<body>  
   
-  <div>
-    <h1>
-      {{ time }}
-    </h1>
-  </div>
-  
-  <div class = "weather">
+  <div class="container">
     
-    <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Weahter-icon">
-    <br>
+    <div class="time">  
+      {{ time }}  
+    </div>  
     
-    <span class = "temp">{{ temp }}<span class = "celsium">°C</span></span> <br>
-    <hr>
-    <span class = "desc">{{ description }}</span> <br>
-    
-    <span class = "city">{{ city }}</span> <br>
-    <br>
+    <div class="weather">  
+      <img class = "icon" src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Weahter-icon">
+      <hr>
+      <p><b>{{ temp }}°C </b></p>
+      <p class = "desc">{{ description }} </p>
+      <hr>
+      <p style = "font-size: medium;">{{ city }} </p>
+    </div>  
   
   </div>
   
-  <div class = "footer">
-    <p>
-      © 2021, Aleksa. All rights reserved.
-    </p>
-  </div>
-  
-</body>
+</body>  
 </html>
